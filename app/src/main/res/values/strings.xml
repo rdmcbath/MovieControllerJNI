@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MovieControllerJNI</string>
+    <string name="actors">Starring</string>
+    <string name="detail_adapter_viewtype_error">No matching type found</string>
+</resources>

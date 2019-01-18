@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="16dp"
+              android:layout_marginEnd="16dp">
+
+    <TextView
+        android:id="@+id/movie_title"
+        tools:text="Top Gun 0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="24sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+
+    <TextView
+        android:id="@+id/movie_description"
+        tools:text="Movie description goes here."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <TextView
+        android:id="@+id/movie_score"
+        tools:text="Movie Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    <TextView
+        android:id="@+id/actors_label"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        tools:text="@string/actors"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"/>
+
+</LinearLayout>
+
