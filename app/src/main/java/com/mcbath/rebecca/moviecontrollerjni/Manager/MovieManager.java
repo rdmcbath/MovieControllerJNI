@@ -1,8 +1,8 @@
-package com.mcbath.rebecca.moviecontrollerjni.Manager;
+package com.mcbath.rebecca.moviecontrollerjni.manager;
 
-import com.mcbath.rebecca.moviecontrollerjni.Model.JNIObject;
-import com.mcbath.rebecca.moviecontrollerjni.Model.Movie;
-import com.mcbath.rebecca.moviecontrollerjni.Model.MovieDetail;
+import com.mcbath.rebecca.moviecontrollerjni.model.JNIObject;
+import com.mcbath.rebecca.moviecontrollerjni.model.Movie;
+import com.mcbath.rebecca.moviecontrollerjni.model.MovieDetail;
 import java.util.ArrayList;
 import java.util.List;
 

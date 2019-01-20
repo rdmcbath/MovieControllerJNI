@@ -1,4 +1,4 @@
-package com.mcbath.rebecca.moviecontrollerjni.UI;
+package com.mcbath.rebecca.moviecontrollerjni.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,14 +9,12 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
-import com.mcbath.rebecca.moviecontrollerjni.Adapter.DetailAdapter;
-import com.mcbath.rebecca.moviecontrollerjni.Manager.MovieManager;
-import com.mcbath.rebecca.moviecontrollerjni.Model.MovieDetail;
+import com.mcbath.rebecca.moviecontrollerjni.adapter.DetailAdapter;
+import com.mcbath.rebecca.moviecontrollerjni.manager.MovieManager;
+import com.mcbath.rebecca.moviecontrollerjni.model.MovieDetail;
 import com.mcbath.rebecca.moviecontrollerjni.R;
 
 import java.util.Objects;
-
-import static com.mcbath.rebecca.moviecontrollerjni.R.layout.activity_detail;
 
 /**
  * Created by Rebecca McBath

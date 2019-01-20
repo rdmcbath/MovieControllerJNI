@@ -1,4 +1,4 @@
-package com.mcbath.rebecca.moviecontrollerjni.Model;
+package com.mcbath.rebecca.moviecontrollerjni.model;
 
 import java.util.ArrayList;
 import java.util.List;

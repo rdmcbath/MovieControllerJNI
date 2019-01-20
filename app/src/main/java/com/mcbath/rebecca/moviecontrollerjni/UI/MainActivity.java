@@ -1,4 +1,4 @@
-package com.mcbath.rebecca.moviecontrollerjni.UI;
+package com.mcbath.rebecca.moviecontrollerjni.ui;
 
 import android.content.Intent;
 import android.support.v4.content.ContextCompat;
@@ -9,15 +9,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import com.mcbath.rebecca.moviecontrollerjni.Adapter.MovieAdapter;
-import com.mcbath.rebecca.moviecontrollerjni.Manager.MovieManager;
-import com.mcbath.rebecca.moviecontrollerjni.Model.Movie;
+
+import com.mcbath.rebecca.moviecontrollerjni.adapter.MovieAdapter;
+import com.mcbath.rebecca.moviecontrollerjni.manager.MovieManager;
+import com.mcbath.rebecca.moviecontrollerjni.model.Movie;
 import com.mcbath.rebecca.moviecontrollerjni.R;
 import java.util.List;
 import java.util.Objects;
-
-import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity {
 	public static final String TAG = "MainActivity";

@@ -1,15 +1,13 @@
-package com.mcbath.rebecca.moviecontrollerjni.Adapter;
+package com.mcbath.rebecca.moviecontrollerjni.adapter;
 
-import com.mcbath.rebecca.moviecontrollerjni.Model.Movie;
+import com.mcbath.rebecca.moviecontrollerjni.model.Movie;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.TextView;
 
 import com.mcbath.rebecca.moviecontrollerjni.R;

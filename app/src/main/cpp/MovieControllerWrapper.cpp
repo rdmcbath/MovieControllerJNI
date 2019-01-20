@@ -13,7 +13,7 @@
  * Method:    getAge
  * Signature: ()I
  */
-extern "C" JNIEXPORT jint JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_Actor_getAge(JNIEnv *env, jobject obj) {
+extern "C" JNIEXPORT jint JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_Actor_getAge(JNIEnv *env, jobject obj) {
     auto *p = getHandle<movies::Actor>(env, obj);
     if(p == 0) return 0;
     return p->age;
@@ -24,7 +24,7 @@ extern "C" JNIEXPORT jint JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Mod
  * Method:    getName
  * Signature: ()Ljava/lang/String;
  */
-extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_Actor_getName
+extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_Actor_getName
         (JNIEnv *env, jobject obj) {
     auto *p = getHandle<movies::Actor>(env, obj);
     if(p == 0) return 0;
@@ -37,7 +37,7 @@ extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_
  * Method:    getImageUrl
  * Signature: ()Ljava/lang/String;
  */
-extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_Actor_getImageUrl
+extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_Actor_getImageUrl
         (JNIEnv *env, jobject obj) {
     movies::Actor *p = getHandle<movies::Actor>(env, obj);
     if(p == 0) return 0;
@@ -50,7 +50,7 @@ extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_
 * Method:    getName
 * Signature: ()Ljava/lang/String;
 */
-extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_Movie_getName
+extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_Movie_getName
         (JNIEnv *env, jobject obj) {
     movies::Movie *p = getHandle<movies::Movie>(env, obj);
     if(p == 0) return 0;
@@ -63,7 +63,7 @@ extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_
  * Method:    getLastUpdate
  * Signature: ()I
  */
-extern "C" JNIEXPORT jint JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_Movie_getLastUpdate
+extern "C" JNIEXPORT jint JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_Movie_getLastUpdate
         (JNIEnv *env, jobject obj) {
     movies::Movie *p = getHandle<movies::Movie>(env, obj);
     return p->lastUpdated;
@@ -74,7 +74,7 @@ extern "C" JNIEXPORT jint JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Mod
  * Method:    createManager
  * Signature: ()J
  */
-extern "C" JNIEXPORT jlong JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Manager_MovieManager_jniCreateManager
+extern "C" JNIEXPORT jlong JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_manager_MovieManager_jniCreateManager
         (JNIEnv *env, jclass type) {
     movies::MovieController *controller = new movies::MovieController();
     if(controller == 0) return 0;
@@ -86,7 +86,7 @@ extern "C" /*
  * Class:     Java_com_mcbath_rebecca_moviecontrollerjni_manager_MovieManager
  * Method:    delete
  */
-void Java_com_mcbath_rebecca_moviecontrollerjni_Manager_MovieManager_delete(JNIEnv *env, jobject obj) {
+void Java_com_mcbath_rebecca_moviecontrollerjni_manager_MovieManager_delete(JNIEnv *env, jobject obj) {
     movies::MovieController *p = getHandle<movies::MovieController>(env, obj);
     setHandle<movies::MovieController>(env, obj, 0);
     delete p;
@@ -97,7 +97,7 @@ void Java_com_mcbath_rebecca_moviecontrollerjni_Manager_MovieManager_delete(JNIE
 * Method:    getMovieList
 * Signature: ()J
 */
-extern "C" JNIEXPORT jlongArray JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Manager_MovieManager_jniGetMovieList
+extern "C" JNIEXPORT jlongArray JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_manager_MovieManager_jniGetMovieList
         (JNIEnv *env, jobject obj) {
 
     movies::MovieController *controller = getHandle<movies::MovieController>(env, obj);
@@ -124,7 +124,7 @@ extern "C" JNIEXPORT jlongArray JNICALL Java_com_mcbath_rebecca_moviecontrollerj
  * Method:    getMovieDetails
  * Signature: (Ljava/lang/String;)J
  */
-extern "C" JNIEXPORT jlong JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Manager_MovieManager_jniGetMovieDetails
+extern "C" JNIEXPORT jlong JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_manager_MovieManager_jniGetMovieDetails
         (JNIEnv * env, jobject obj, jstring movie_name) {
 
     movies::MovieController *controller = getHandle<movies::MovieController>(env, obj);
@@ -141,7 +141,7 @@ extern "C" JNIEXPORT jlong JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Ma
  * Method:    getName
  * Signature: ()Ljava/lang/String;
  */
-extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_MovieDetail_getName
+extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_MovieDetail_getName
         (JNIEnv * env, jobject obj){
     movies::MovieDetail *p = getHandle<movies::MovieDetail>(env,obj);
     if(p == 0) return 0;
@@ -154,7 +154,7 @@ extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_
  * Method:    getScore
  * Signature: ()F
  */
-extern "C" JNIEXPORT jfloat JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_MovieDetail_getScore
+extern "C" JNIEXPORT jfloat JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_MovieDetail_getScore
         (JNIEnv * env, jobject obj){
     movies::MovieDetail *p = getHandle<movies::MovieDetail>(env,obj);
     if(p == 0) return 0;
@@ -166,7 +166,7 @@ extern "C" JNIEXPORT jfloat JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_M
  * Method:    getDescription
  * Signature: ()Ljava/lang/String;
  */
-extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_MovieDetail_getDescription
+extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_MovieDetail_getDescription
         (JNIEnv * env, jobject obj){
     movies::MovieDetail *p = getHandle<movies::MovieDetail>(env,obj);
     if(p == 0) return 0;
@@ -179,7 +179,7 @@ extern "C" JNIEXPORT jstring JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_
  * Method:    getActors
  * Signature: ()[J
  */
-extern "C" JNIEXPORT jlongArray JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_Model_MovieDetail_getActors
+extern "C" JNIEXPORT jlongArray JNICALL Java_com_mcbath_rebecca_moviecontrollerjni_model_MovieDetail_getActors
         (JNIEnv * env, jobject obj){
 
     movies::MovieDetail *p = getHandle<movies::MovieDetail>(env,obj);

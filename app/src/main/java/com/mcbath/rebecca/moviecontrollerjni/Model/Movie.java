@@ -1,4 +1,4 @@
-package com.mcbath.rebecca.moviecontrollerjni.Model;
+package com.mcbath.rebecca.moviecontrollerjni.model;
 
 /**
  * Created by Rebecca McBath

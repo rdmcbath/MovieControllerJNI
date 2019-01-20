@@ -1,11 +1,8 @@
-package com.mcbath.rebecca.moviecontrollerjni.Adapter;
+package com.mcbath.rebecca.moviecontrollerjni.adapter;
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.mcbath.rebecca.moviecontrollerjni.Model.Actor;
-import com.mcbath.rebecca.moviecontrollerjni.Model.MovieDetail;
+import com.mcbath.rebecca.moviecontrollerjni.model.Actor;
+import com.mcbath.rebecca.moviecontrollerjni.model.MovieDetail;
 import com.mcbath.rebecca.moviecontrollerjni.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -88,23 +84,20 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 				holderActorDetail.mActorImage.setImageResource(R.drawable.ic_face_black_24dp);
 			}
 
-				String actorName = actor.getName() + "\n age " + actor.getAge();
-				holderActorDetail.mActorName.setText(actorName);
+			String actorName = null;
+			if (actor != null) {
+				actorName = actor.getName() + "\n age " + actor.getAge();
+			}
+			holderActorDetail.mActorName.setText(actorName);
 
-				String actorImageUrl = actor.getImageUrl();
+				String actorImageUrl = actor != null ? actor.getImageUrl() : null;
 				Log.d(TAG, "Actor image url = " + actorImageUrl);
 
-				if (actorImageUrl == null || actorImageUrl.length() == 0) {
-					holderActorDetail.mActorImage.setImageResource(R.drawable.ic_face_black_24dp);
-
-				} else {
-
 				RequestOptions options = new RequestOptions()
-						.centerCrop()
 						.placeholder(R.drawable.ic_face_black_24dp)
 						.error(R.drawable.ic_face_black_24dp);
 				Glide.with(holderActorDetail.itemView.getContext()).load(actorImageUrl).apply(options).into(holderActorDetail.mActorImage);
-				}
+
 
 		} else if (holder instanceof ViewHolderMovieDetail) {
 			ViewHolderMovieDetail holderMovieDetail = (ViewHolderMovieDetail) holder;
